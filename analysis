@@ -1,0 +1,9 @@
+OVERVIEW 
+
+In this project we used deep learning and neural networks to see if applications to a charity fund, Alphabet Soup, would be successfully funded. 
+
+    Data Preprocessing
+        First, we removed any uneccessary information-- specifically "NAME" and "EIN". The remaining columns were then used as features for the model. Then, the data was split for training and testing. The target variable was labeled "IS_SUCCESSFUL", with values YES (1) and NO(0). APPLICATION and CLASSIFICATION were analyzed and used for binning purposes. An "OTHER" variable was created in order to store rare categorical values together. Then, a check was run to ensure binning was successful and variables were encoded using "pd.get_dummies()". 
+
+    COMPILING, TRAINING, AND EVALUATING
+        Each model had three layers, to each of which a neural network was applied. The number of hidden nodes were dictated by the total number of features. The first attempt by the training model was just over 72%. This is, obviously, close to the ideal 75% but not quite perfect. In order to optimize performance, "NAME" was added back into the dataset. This resulted in a 79% result, which was a significant improvement. Mutliple layers were necessary for the success of this project, as deep-learning relies on repeated test opportunities to hone its accuracy. 
